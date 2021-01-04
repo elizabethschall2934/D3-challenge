@@ -1,5 +1,5 @@
 .aText {
-  font-family: sans-serif;
+  font-family: "Avantgarde", TeX Gyre Adventor, URW Gothic L, sans-serif;
   font-size: 16px;
   text-anchor: middle;
 }
@@ -25,14 +25,14 @@
 
 /* font size dependent on radius, see app.js */
 .stateText {
-  font-family: sans-serif;
+  font-family: "Avantgarde", TeX Gyre Adventor, URW Gothic L, sans-serif;
   fill: #fff;
   text-anchor: middle;
 }
 
 .stateCircle {
-  fill: #89bdd3;
-  stroke: #e3e3e3;
+  fill: #d80fc7;
+  stroke: #9f0fd8;
 }
 
 .chart {
