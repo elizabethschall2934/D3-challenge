@@ -9,18 +9,33 @@
 
 //https://www.d3-graph-gallery.com/graph/scatter_basic.html
 // set the dimensions and margins of the graph
-var margin = {top: 20, right: 40, bottom: 60, left: 50},
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+var svgWidth = 960;
+var svgHeight = 500;
 
-// append the svg object to the body of the page
+var margin = {top: 20, right: 40, bottom: 60, left: 50};
+
+var width = svgWidth - margin.left - margin.right;
+var height = svgHeight - margin.top - margin.bottom;
+
+// Create an SVG wrapper, append an SVG group that will hold our chart,
+// and shift the latter by left and top margins.
+
 var svg = d3.select("#scatter")
   .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-  .append("g")
-    .attr("transform",
-          "translate(" + margin.left + "," + margin.top + ")");
+  .attr("width", svgWidth)
+  .attr("height", svgHeight);
+
+// Append an SVG group
+
+var chartGroup = svg.append("g")
+  .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+// Initial Params
+
+
+
+
+// function used for updating x-scale var upon click on axis label
 
 //Read the data
 d3.csv("assets/data/data.csv").then(function(assetData) {
@@ -28,11 +43,16 @@ d3.csv("assets/data/data.csv").then(function(assetData) {
 
 // });
 
-// Cast the value to a number for each piece of data
+// parse data
   assetData.forEach(function(data) {
     data.poverty = +data.poverty;
     data.healthcare = +data.healthcare;
+    data.age = +data.age;
+    data.income = +data.income;
+    data.obesity = +data.obesity;
+    data.smokes = +data.smokes;
   });
+
 // Add X axis
 var x = d3.scaleLinear()
 .domain([0, 25])
