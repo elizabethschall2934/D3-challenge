@@ -4,12 +4,6 @@
   text-anchor: middle;
 }
 
-.aText2 {
-  font-family: "Avantgarde", TeX Gyre Adventor, URW Gothic L, sans-serif;
-  font-size: 16px;
-  text-anchor: middle;
-}
-
 .active {
   font-weight: bold;
   fill: #000;
@@ -36,27 +30,12 @@
   text-anchor: middle;
 }
 
-.stateText2 {
-  font-family: "Avantgarde", TeX Gyre Adventor, URW Gothic L, sans-serif;
-  fill: #fff;
-  text-anchor: middle;
-}
-
 .stateCircle {
   fill: #d80fc7;
   stroke: #9f0fd8;
 }
 
-.stateCircle2 {
-  fill: #d80fc7;
-  stroke: #9f0fd8;
-}
 .chart {
-  display: block;
-  margin: 0;
-}
-
-.char2 {
   display: block;
   margin: 0;
 }
@@ -73,17 +52,7 @@
   border-radius: 4px;
 }
 
-.d3-tip2 {
-  padding: 6px;
-  font-size: 12px;
-  line-height: 1;
-  line-height: 1.5em;
-  color: #fff;
-  text-align: center;
-  text-transform: capitalize;
-  background: rgba(0, 0, 0, 0.8);
-  border-radius: 4px;
-}
+
 
 /* Mobile Rules */
 @media screen and (max-width: 530px) {
@@ -94,20 +63,11 @@
   .aText {
     font-size: 14px;
   }
-  .stateText2 {
-    display: none;
-  }
-
-  .aText2 {
-    font-size: 14px;
-  }
 }
 
 @media screen and (max-width: 400px) {
   .aText {
     font-size: 13px;
   }
-  .aText2 {
-    font-size: 13px;
-  }
+ 
 }
